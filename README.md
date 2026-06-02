@@ -78,14 +78,14 @@ An enterprise AI chatbot built with **LangChain4j** and **Spring Boot**, powered
 
 ## ⚙️ Tech Stack
 
-| Component | Technology |
-|---|---|
-| Framework | Spring Boot 3.3.5 |
-| AI Framework | LangChain4j 0.36.2 |
-| AI Provider | Google Gemini (`gemini-2.0-flash`) |
-| Build Tool | Maven |
-| Language | Java 17 |
-| Testing | JUnit 5 + Mockito + AssertJ |
+| Component    | Technology                               |
+| --------------| ------------------------------------------|
+| Framework    | Spring Boot 3.3.5                        |
+| AI Framework | LangChain4j 0.36.2                       |
+| AI Provider  | Google Gemini (`gemini-2-flash-preview`) |
+| Build Tool   | Maven                                    |
+| Language     | Java 17                                  |
+| Testing      | JUnit 5 + Mockito + AssertJ              |
 
 ---
 
@@ -404,17 +404,23 @@ This endpoint deliberately throws a `RuntimeException` to show that:
 ### 1. Chatbot Conversation
 *(Multi-turn conversation showing context retention)*
 
-`[ ADD SCREENSHOT HERE ]`
+**Here I am telling the chatbot my name, and sending the request with a `session_id`.**
+![Session_1_conversaion_inital](src\assests\screenshots\image.png)
+**And below we can see that the chatbot still remembers my name.**
+![Session_2_conversation_continuation](src\assests\screenshots\image-1.png)
 
 ### 2. Tool / Function Execution
 *(Screenshot showing the chatbot calling a custom tool/function like the Calculator or Product lookup)*
 
-`[ ADD SCREENSHOT HERE ]`
+**I sent a simple calcuation request.**
+![tool_request_send](src\assests\screenshots\image-2.png)
+**And then AI used the calculator tool to calculate the result.**
+![tool_call](src\assests\screenshots\image-3.png)
 
 ### 3. Error Handling / Fallback
 *(Screenshot showing invalid input or AI failure with a graceful fallback response)*
-
-`[ ADD SCREENSHOT HERE ]`
+**I sent an inapporiate request that the agent refused to answer.**
+![invalid_input](src\assests\screenshots\image-4.png)
 
 ---
 
@@ -473,11 +479,3 @@ d:\exterprise-java-ai\
 ```
 
 ---
-
-## 📝 Branch
-
-This implementation lives on: `feature/langchain4j-chatbot`
-
-```bash
-git branch    # confirms: * feature/langchain4j-chatbot
-```
