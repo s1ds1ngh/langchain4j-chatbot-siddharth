@@ -19,6 +19,7 @@ An enterprise AI chatbot built with **LangChain4j** and **Spring Boot**, powered
   - [Model Parameter Configuration](#4-model-parameter-configuration)
   - [Error Handling](#5-error-handling)
 - [Demo Walkthrough](#-demo-walkthrough)
+- [Visual Proof (Screenshots)](#-visual-proof-screenshots-required)
 - [Running Tests](#-running-tests)
 - [Project Structure](#-project-structure)
 
@@ -393,6 +394,27 @@ This endpoint deliberately throws a `RuntimeException` to show that:
 - The exception is caught at the service level.
 - A structured JSON response is returned (no raw stack trace).
 - The application continues processing subsequent requests normally.
+
+---
+
+## 📸 Visual Proof (Screenshots Required)
+
+> **Note to student/developer:** Add your screenshots in the placeholders below to complete the documentation requirement.
+
+### 1. Chatbot Conversation
+*(Multi-turn conversation showing context retention)*
+
+`[ ADD SCREENSHOT HERE ]`
+
+### 2. Tool / Function Execution
+*(Screenshot showing the chatbot calling a custom tool/function like the Calculator or Product lookup)*
+
+`[ ADD SCREENSHOT HERE ]`
+
+### 3. Error Handling / Fallback
+*(Screenshot showing invalid input or AI failure with a graceful fallback response)*
+
+`[ ADD SCREENSHOT HERE ]`
 
 ---
 
